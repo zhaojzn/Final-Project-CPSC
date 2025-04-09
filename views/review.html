@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MovieRec - Review Details</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="shortcut icon" href="img/movie.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MovieRec</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#reviewDetailsNav" aria-controls="reviewDetailsNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="reviewDetailsNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="member.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="posts.html">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr>
+    <main>
+      <div class="my-4">
+        <h2 id="reviewTitle">Review Title Here</h2>
+        <p id="reviewRating">Rating: N/A</p>
+        <p id="reviewBy">Created by: Unknown</p>
+        <p id="reviewTime">Created at: Unknown</p>
+        <p id="reviewContent">Detailed review content goes here. This section displays the full review text and any additional details about the review.</p>
+        <a href="posts.html" class="btn btn-secondary">Back to Reviews</a>
+      </div>
+    </main>
+    <hr>
+    <footer class="text-center h3">
+        <kbd role="contentinfo">&copy;<span></span> Jason Zhao. All rights reserved.</kbd>
+      </footer>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/reviewDetails.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MovieRec - Guest Dashboard</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="shortcut icon" href="img/movie.png" type="image/x-icon" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MovieRec</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#guestNav" aria-controls="guestNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="guestNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="guest.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="posts.html">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <div class="mt-4">
+        <h2>Welcome, Guest!</h2>
+        <p>Welcome to the MovieRec Guest Dashboard. As a guest, you can view reviews but you are not allowed to create new reviews. If you would like full access, please consider contacting an admin.</p>
+        <p>Use the navigation bar above to browse reviews.</p>
+      </div>
+    </main>
+    <hr />
+    <footer class="text-center h3">
+        <kbd role="contentinfo">&copy;<span></span> Jason Zhao. All rights reserved.</kbd>
+      </footer>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

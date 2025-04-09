@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MovieRec - Member Dashboard</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="shortcut icon" href="img/movie.png" type="image/x-icon" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MovieRec</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#reviewsNav" aria-controls="reviewsNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="reviewsNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="member.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="posts.html">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <div class="mt-4">
+        <h2>Welcome, Member!</h2>
+        <p>Welcome to your MovieRec dashboard. Here you can:</p>
+        <ul>
+          <li>Post movie reviews and recommendations</li>
+          <li>View and interact with posts from other members</li>
+          <li>Discover our curated list of movies</li>
+        </ul>
+        <p>Use the navigation bar above to get started.</p>
+      </div>
+    </main>
+    <hr />
+    <footer class="text-center h3">
+      <kbd role="contentinfo">&copy;<span></span> Jason Zhao. All rights reserved.</kbd>
+    </footer>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/checkMember.js"></script>
+
+  
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MovieRec - Reviews</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="shortcut icon" href="img/movie.png" type="image/x-icon" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MovieRec</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#reviewsNav" aria-controls="reviewsNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="reviewsNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link dashboard-link" href="member.html">Dashboard</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="posts.html">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <ul class="nav nav-tabs" id="reviewsTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="new-review-tab" data-bs-toggle="tab" data-bs-target="#new-review" type="button" role="tab" aria-controls="new-review" aria-selected="true">
+            New Review
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="review-list-tab" data-bs-toggle="tab" data-bs-target="#review-list" type="button" role="tab" aria-controls="review-list" aria-selected="false">
+            Reviews List
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="reviewsTabsContent">
+        <div class="tab-pane fade show active" id="new-review" role="tabpanel" aria-labelledby="new-review-tab">
+            <div class="my-4">
+              <h3>Create a New Review</h3>
+              <form action="/addPost" method="post">
+                <div class="mb-3">
+                  <label for="movieSearch" class="form-label">Movie Title</label>
+                  <input type="text" class="form-control" id="movieSearch" name="topic" placeholder="Search for a movie" list="movieSuggestions" required>
+                  <datalist id="movieSuggestions"></datalist>
+                </div>
+                <div class="mb-3">
+                  <label for="rating" class="form-label">Rating (1-10)</label>
+                  <input type="range" class="form-range" min="1" max="10" value="5" id="rating" name="rating" oninput="document.getElementById('ratingValue').innerText = this.value" required>
+                  <span id="ratingValue">5</span>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Review Details</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your review here" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+              </form>
+            </div>
+          </div>
+          
+        <div class="tab-pane fade" id="review-list" role="tabpanel" aria-labelledby="review-list-tab">
+          <div class="my-4">
+            <h3>All Reviews</h3>
+            <div id="reviewsListContainer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <hr />
+    <footer class="text-center h3">
+        <kbd role="contentinfo">&copy;<span></span> Jason Zhao. All rights reserved.</kbd>
+      </footer>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/fetchPosts.js"></script>
+  <script src="js/userRole.js"></script>
+  <script src="js/movieSearch.js"></script>
+
+</body>
+</html>
